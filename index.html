@@ -50,7 +50,20 @@
   <script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
+  <script>
+    const navbar = document.getElementById('navbar');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) { // Trigger after 50px scroll
+        navbar.classList.add('scrolled');
+        navbar.classList.add('sticky', 'z-[999]', 'top-0');
+      } else {
+        navbar.classList.remove('scrolled');
+        navbar.classList.remove('sticky', 'z-[999]', 'top-0');
+      }
+    });
+  </script>
+  
 
 </head>
 
@@ -67,7 +80,7 @@
         this.triggerNavItem(id)
     }
 }">
-      <div class="w-full z-50 top-0 py-1 sm:py-2 absolute sticky z-[999] top-0 bg-[#493698]">
+<div id="navbar" class="w-full z-50 top-0 py-1 sm:py-2 absolute transition-all duration-300">
 
         <div class="container flex items-center justify-between">
           <div class="flex justify-start gap-5">
