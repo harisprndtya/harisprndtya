@@ -24,7 +24,8 @@
     "cssnano": "^5.0.17",
     "postcss-cli": "^9.1.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
