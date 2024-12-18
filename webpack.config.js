@@ -30,7 +30,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index2.html",
+      template: "./index.html",
     }),
     new CopyWebpackPlugin({
       patterns: [
