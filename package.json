@@ -9,7 +9,7 @@
     "develop": "concurrently 'npm:css -- --watch' 'npm:server-reload'",
     "format": "npx prettier ./**/*.html",
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "npm run css -- --env 'production'"
   },
   "browserslist": [
     "last 2 versions",
