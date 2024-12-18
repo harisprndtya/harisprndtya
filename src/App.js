@@ -1,8 +1,16 @@
 import React from "react";
-// import logo from './assets/img/haris-logo.png'; // Update the path as needed
+import Meta from "./components/header/Meta";
+import Body from "./components/body/components/Body";
 
 const App = () => {
-  return <>asdasd</>;
+  return (
+    <>
+      <div>
+<Body/>
+
+      </div>
+    </>
+  );
 };
 
 export default App;
