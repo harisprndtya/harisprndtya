@@ -71,7 +71,7 @@
         :class="['w-full', 'py-2', 'sm:py-2', mobileMenu ? '' : 'sticky', 'z-[999]', 'top-0', 'bg-[#493698]']">
 
         <script>
-          fetch('./pages/header/components/web/headerweb.html')
+          fetch('./src/pages/header/components/web/headerweb.html')
             .then(response => response.text())
             .then(data => {
               document.getElementById('headerweb').innerHTML = data;
@@ -81,7 +81,7 @@
       </div>
       <div id="headermobile">
         <script>
-          fetch('./pages/header/components/mobile/headermobile.html')
+          fetch('./src/pages/header/components/mobile/headermobile.html')
             .then(response => response.text())
             .then(data => {
               document.getElementById('headermobile').innerHTML = data;
@@ -91,7 +91,7 @@
       </div>
       <div id="content">
         <script>
-          fetch('./pages/content/Content.html')
+          fetch('./src/pages/content/Content.html')
             .then(response => response.text())
             .then(data => {
               document.getElementById('content').innerHTML = data;
@@ -103,14 +103,14 @@
 
           function loadContentComponents() {
             const componentPaths = [
-              { id: 'ContentFirstIntroduce', path: './pages/content/components/ContentFirstIntroduce.html' },
-              { id: 'ContentSecondIntroduce', path: './pages/content/components/ContentSecondIntroduce.html' },
-              { id: 'ContentService', path: './pages/content/components/ContentService.html' },
-              { id: 'ContentPortfolio', path: './pages/content/components/ContentPortfolio.html' },
-              { id: 'ContentLatestClient', path: './pages/content/components/ContentLatestClient.html' },
-              { id: 'ContentWorkingExperience', path: './pages/content/components/ContentWorkingExperience.html' },
-              { id: 'ContentProject', path: './pages/content/components/ContentProject.html' },
-              { id: 'ContentPost', path: './pages/content/components/ContentPost.html' },
+              { id: 'ContentFirstIntroduce', path: './src/pages/content/components/ContentFirstIntroduce.html' },
+              { id: 'ContentSecondIntroduce', path: './src/pages/content/components/ContentSecondIntroduce.html' },
+              { id: 'ContentService', path: './src/pages/content/components/ContentService.html' },
+              { id: 'ContentPortfolio', path: './src/pages/content/components/ContentPortfolio.html' },
+              { id: 'ContentLatestClient', path: './src/pages/content/components/ContentLatestClient.html' },
+              { id: 'ContentWorkingExperience', path: './src/pages/content/components/ContentWorkingExperience.html' },
+              { id: 'ContentProject', path: './src/pages/content/components/ContentProject.html' },
+              { id: 'ContentPost', path: './src/pages/content/components/ContentPost.html' },
             ];
 
             componentPaths.forEach(({ id, path }) => {
@@ -127,7 +127,7 @@
       </div>
       <div id="footer">
         <script>
-          fetch('./pages/footer/Footer.html')
+          fetch('./src/pages/footer/Footer.html')
             .then(response => response.text())
             .then(data => {
               document.getElementById('footer').innerHTML = data;
@@ -139,10 +139,10 @@
 
           function loadFooterComponents() {
             const componentPaths = [
-              { id: 'FooterContactForm', path: './pages/footer/components/FooterContactForm.html' },
-              { id: 'FooterMaps', path: './pages/footer/components/FooterMaps.html' },
-              { id: 'FooterUpdate', path: './pages/footer/components/FooterUpdate.html' },
-              { id: 'FooterCopyright', path: './pages/footer/components/FooterCopyright.html' },
+              { id: 'FooterContactForm', path: './src/pages/footer/components/FooterContactForm.html' },
+              { id: 'FooterMaps', path: './src/pages/footer/components/FooterMaps.html' },
+              { id: 'FooterUpdate', path: './src/pages/footer/components/FooterUpdate.html' },
+              { id: 'FooterCopyright', path: './src/pages/footer/components/FooterCopyright.html' },
             ];
 
             componentPaths.forEach(({ id, path }) => {
