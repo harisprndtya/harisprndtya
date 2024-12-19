@@ -5,10 +5,7 @@ import Body from "./components/body/components/Body";
 const App = () => {
   return (
     <>
-      <div>
-<Body/>
-
-      </div>
+      <div>Haris </div>
     </>
   );
 };
