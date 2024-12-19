@@ -67,41 +67,28 @@
     }
 }">
 
-      <div id="header">
+      <div id="headerweb"
+        :class="['w-full', 'py-2', 'sm:py-2', mobileMenu ? '' : 'sticky', 'z-[999]', 'top-0', 'bg-[#493698]']">
+
         <script>
-          fetch('./pages/header/Header.html')
+          fetch('./pages/header/components/web/headerweb.html')
             .then(response => response.text())
             .then(data => {
-              document.getElementById('header').innerHTML = data;
-              loadHeaderComponents();
-
-              // Reinitialize Alpine.js
-              document.dispatchEvent(new Event('alpine:init'));
+              document.getElementById('headerweb').innerHTML = data;
             })
-            .catch(error => console.error('Error loading header:', error));
-
-          function loadHeaderComponents() {
-            const componentPaths = [
-              { id: 'headerweb', path: './pages/header/components/web/headerweb.html' },
-              { id: 'headermobile', path: './pages/header/components/mobile/headermobile.html' },
-            ];
-
-            componentPaths.forEach(({ id, path }) => {
-              fetch(path)
-                .then(response => response.text())
-                .then(data => {
-                  document.getElementById(id).innerHTML = data;
-
-                  // Ensure sticky and other styles apply after content injection
-                  requestAnimationFrame(() => window.dispatchEvent(new Event('resize')));
-                })
-                .catch(error => console.error(`Error loading ${id}:`, error));
-            });
-          }
-
+            .catch(error => console.error('Error loading headerweb:', error));
         </script>
       </div>
-
+      <div id="headermobile">
+        <script>
+          fetch('./pages/header/components/mobile/headermobile.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('headermobile').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading headermobile:', error));
+        </script>
+      </div>
       <div id="content">
         <script>
           fetch('./pages/content/Content.html')
