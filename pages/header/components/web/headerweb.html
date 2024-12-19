@@ -1,0 +1,96 @@
+<div :class="['w-full', 'py-2', 'sm:py-2', mobileMenu ? '' : 'sticky', 'z-[999]', 'top-0', 'bg-[#493698]']">
+    <div class="container flex items-center justify-between">
+        <div class="flex justify-start gap-5">
+            <div class="rounded-full border-4 sm:border-2 lg:border-2 border-primary shadow-xl overflow-hidden">
+                <a href="/">
+                    <img src="/assets/img/haris-logo.png" class="h-8 lg:h-10 md:h-8 sm:h-10 w-8 lg:w-10 md:w-8 sm:w-12"
+                        alt="logo image" />
+                </a>
+            </div>
+
+            <h1
+                class="text-center flex items-center font-header text-white sm:text-left text-xl sm:text-2xl md:text-3xl lg:text-xl">
+                Haris Prananditya
+
+            </h1>
+
+        </div>
+
+        <!-- <div id="menu"></div> -->
+
+        <div class="hidden lg:block">
+            <ul class="flex items-center">
+
+                <li class="group pl-6">
+
+                    <span @click="triggerNavItem('#about')"
+                        class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">About</span>
+
+                    <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+
+                    <span @click="triggerNavItem('#services')"
+                        class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Services</span>
+
+                    <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+
+                    <span @click="triggerNavItem('#portfolio')"
+                        class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
+
+                    <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+
+                    <span @click="triggerNavItem('#clients')"
+                        class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Clients</span>
+
+                    <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+
+                    <span @click="triggerNavItem('#work')"
+                        class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Work</span>
+
+                    <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+
+                    <span @click="triggerNavItem('#statistics')"
+                        class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Statistics</span>
+
+                    <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+
+                    <span @click="triggerNavItem('#blog')"
+                        class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Blog</span>
+
+                    <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+
+                    <span @click="triggerNavItem('#contact')"
+                        class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Contact</span>
+
+                    <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+            </ul>
+        </div>
+        <div class="block lg:hidden">
+            <button @click="mobileMenu = !mobileMenu">
+                <i class="bx bx-menu text-4xl text-white"></i>
+            </button>
+        </div>
+    </div>
+</div>

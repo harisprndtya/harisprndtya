@@ -8,7 +8,7 @@
     "server-reload": "browser-sync start --config './browser-sync-config.js'",
     "develop": "concurrently 'npm:css -- --watch' 'npm:server-reload'",
     "format": "npx prettier ./**/*.html",
-    "start": "webpack serve --mode development",
+    "start": "http-server -c-1 .",
     "build": "npm run css -- --env 'production'"
   },
   "browserslist": [
